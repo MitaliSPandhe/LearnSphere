@@ -5,6 +5,17 @@ It allows students to register, login, browse courses, enroll, and manage their 
 
 ---
 
+## 🤖 AI Features (Google Gemini)
+
+- AI-powered doubt solving
+- Course recommendation ideas (future scope)
+- Smart learning assistant 
+- Content explanation support
+
+> ⚡ Google Gemini API is integrated to enhance the learning experience using generative AI.
+
+---
+
 ## 🚀 Features
 
 ### 👤 User Management
