@@ -27,9 +27,10 @@ function ForgotPassword() {
         state: { email },
       });
     } 
-    catch {
-      alert("Failed to send OTP");
-    }
+    catch (err) {
+    alert(err.response?.data || "Failed to send OTP");
+     }
+
   };
 
   return (
@@ -133,3 +134,4 @@ const styles = {
 };
 
 export default ForgotPassword;
+
