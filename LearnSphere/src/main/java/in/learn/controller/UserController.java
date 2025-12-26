@@ -28,9 +28,18 @@ public class UserController {
     }
 	
     @PostMapping("/forgot-password")
-    public String forgot(@RequestParam String email) {
-        return service.forgotPassword(email);
-    }
+	public ResponseEntity<String> forgot(@RequestParam String email) {
+
+	    String result = service.forgotPassword(email);
+
+	    if ("Email not registered".equals(result)) {
+	        return ResponseEntity
+	                .status(HttpStatus.BAD_REQUEST)
+	                .body(result);
+	    }
+
+	    return ResponseEntity.ok(result);
+	}
 
     @PostMapping("/reset-password")
     public String reset(
@@ -52,3 +61,4 @@ public class UserController {
     }
 
 }
+
